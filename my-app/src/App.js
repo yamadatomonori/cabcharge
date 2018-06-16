@@ -32,7 +32,7 @@ class App extends React.Component {
         return ac;
       }, {}))
       
-      .then(response => this.setState({message: response.data});)
+      .then(response => this.setState({message: response.data}))
       .catch(error => this.setState({message: error.message}))
       .finally(() => this.setState({isEnabled: true, submit: 'Submit'}));
     }
