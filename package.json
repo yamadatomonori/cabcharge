@@ -14,7 +14,6 @@
     "mailgun-js": "^0.18.0",
     "mailgun.js": "^2.0.1",
     "react-bootstrap": "^0.32.1",
-    "react-form": "^3.5.5",
     "socket.io": "~0.9.14"
   }
 }
