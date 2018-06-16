@@ -1,0 +1,21 @@
+{
+  "name": "cabcharge",
+  "version": "0.0.0",
+  "description": "cabcharge",
+  "main": "server.js",
+  "repository": "",
+  "author": "Tomonori Yamada <tomonori.yamada.g@gmail.com>",
+  "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
+    "async": "~0.2.8",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.1",
+    "express": "~3.2.4",
+    "mailgun-js": "^0.18.0",
+    "mailgun.js": "^2.0.1",
+    "react-bootstrap": "^0.32.1",
+    "react-form": "^3.5.5",
+    "socket.io": "~0.9.14"
+  }
+}
