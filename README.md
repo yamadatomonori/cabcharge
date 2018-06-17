@@ -23,6 +23,13 @@ export DOMAIN_MAILGUN={Your Domain of Mailgun}
 npm start
 ```
 
+## Test
+## Frontend unit test
+```
+cd my-app
+npm test
+```
+
 # To do
 - Replace client libralies of Sendgrid and Mailgun with curl
 - Write unit tests
