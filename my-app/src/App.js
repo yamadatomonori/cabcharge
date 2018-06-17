@@ -13,7 +13,7 @@ const FIELDS = [
   'text'
 ];
   
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     
@@ -71,7 +71,7 @@ class App extends React.Component {
   }
 }
 
-class Button extends React.Component {
+export class Button extends React.Component {
   render() {
     let label = this.props.disabled ? 'Submitting' : 'Submit';
   
@@ -82,5 +82,3 @@ class Button extends React.Component {
     );
   }
 }
-
-export default App;
