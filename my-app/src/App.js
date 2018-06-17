@@ -44,7 +44,7 @@ class App extends React.Component {
         <Form onSubmit={
           submittedValues => {
             this.setState({submittedValues});
-            this.setState({submitting: true, submittimessage: ''});
+            this.setState({submitting: true, message: ''});
           }
         }>
           {formApi => (
