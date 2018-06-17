@@ -17,7 +17,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     
-    this.state = {submit: "Submit", isEnabled: true};
+    this.state = {submitting: false};
   }
   
   componentDidUpdate(prevProps, prevState) {
@@ -34,7 +34,7 @@ class App extends React.Component {
       
       .then(response => this.setState({message: response.data}))
       .catch(error => this.setState({message: error.message}))
-      .finally(() => this.setState({isEnabled: true, submit: 'Submit'}));
+      .finally(() => this.setState({submitting: false}));
     }
   }
   
@@ -44,8 +44,7 @@ class App extends React.Component {
         <Form onSubmit={
           submittedValues => {
             this.setState({submittedValues});
-            this.setState({submit: 'Submitting...'});
-            this.setState({isEnabled: false, message: ''});
+            this.setState({submitting: true, submittimessage: ''});
           }
         }>
           {formApi => (
@@ -62,14 +61,24 @@ class App extends React.Component {
               <Text field="subject" id="subject" size="90" />
               <label htmlFor="text">Text</label>
               <TextArea field="text" id="text" cols="100" rows="10" />
-              <button type="submit" className="mb-4 btn btn-primary" disabled={!this.state.isEnabled}>
-                {this.state.submit}
-              </button>
+              <Button disabled={this.state.submitting} />
               <span className="message">{this.state.message}</span>
             </form>
           )}
         </Form>
       </div>
+    );
+  }
+}
+
+class Button extends React.Component {
+  render() {
+    let label = this.props.disabled ? 'Submitting' : 'Submit';
+  
+    return (
+      <button type="submit" className="mb-4 btn btn-primary" disabled={this.props.disabled}>
+        {label}
+      </button>
     );
   }
 }
